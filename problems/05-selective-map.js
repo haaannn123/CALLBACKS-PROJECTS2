@@ -43,12 +43,24 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 *******************************************************************************/
 
 function selectiveMap(array, selector, mapper) {
-    // Your code here
+  // Your code here
+  let arr = [];
+  for (let i in array) {
+    console.log(i);
+    let num = array[i];
+    if (selector(num) === true) {
+      //mapper(num)
+      arr.push(mapper(num));
+    } else {
+      arr.push(num);
+    }
+  }
+  return arr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
-    module.exports = selectiveMap;
-} catch(e) {
-    return null;
+  module.exports = selectiveMap;
+} catch (e) {
+  return null;
 }
