@@ -22,12 +22,25 @@ console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
 function myForEach(array, cb) {
-    
+<<<<<<< HEAD
+
+=======
+  for (let i in array) {
+    let el = array[i];
+    array.push(cb(el));
+  }
+>>>>>>> origin/main
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
+<<<<<<< HEAD
     module.exports = myForEach;
 } catch(e) {
     return null;
+=======
+  module.exports = myForEach;
+} catch (e) {
+  return null;
+>>>>>>> origin/main
 }
