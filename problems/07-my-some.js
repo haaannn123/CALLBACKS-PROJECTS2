@@ -24,12 +24,18 @@ console.log(result3);   // true
 *******************************************************************************/
 
 function mySome(array, cb) {
-    // Your code here
+  for (let i in array) {
+    let ele = array[i];
+    console.log(ele, i);
+    console.log(cb(ele, i))
+    if (cb(ele, Number(i))) return true;
+  }
+  return false;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
-    module.exports = mySome;
-} catch(e) {
-    return null;
+  module.exports = mySome;
+} catch (e) {
+  return null;
 }
